@@ -1,286 +1,61 @@
-
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Kaede Shiohara</title>
-
-  <meta name="author" content="Kaede Shiohara">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="NBt3cmFe-oTUP8zdL5-eVck05i7BoTOek46Cv9eIGmY">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Kaede Shiohara</title>
+    <meta name="author" content="Kaede Shiohara">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.5.3/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-i18n@8.26.7/dist/vue-i18n.js"></script>
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Kaede Shiohara</name>
-              </p>
-              <p>
-                I am a PhD student at <a href="https://www.cvm.t.u-tokyo.ac.jp/" >Computer Vision and Media Lab</a>. <br>
-                I am mainly working on face recognition, generation, and forensics for human content creation. <br>
-                <font color="red">I am looking for a full-time research scientist position from April 2025.</font> Please contact me by <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp">e-mail</a> if you are interested.
-              </p>
-              <p style="text-align:center">
-                <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> &nbsp/&nbsp
-                <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/kaedeshioharacs">Twitter</a> &nbsp/&nbsp
-                <a href="https://github.com/mapooon">Github</a> 
-              </p>
-            </td>
-            <td style="padding:2.5%;width:20%;max-width:40%">
-              <a href="./files/photo/profile.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="./files/photo/profile.jpeg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                    <heading> <font size="6"> Education </font></heading>
-                    <p>
-                      <strong> <font size="4"> The University of Tokyo </font></strong><br>
-                      Ph.D. in Graduate School of Information Science and Technology<br>
-                      Department of Information and Communication Engineering<br> 
-                      Supervisor: <a href=https://www.cvm.t.u-tokyo.ac.jp/en/>Prof. Toshihiko Yamasaki</a> <br>
-                      <em>2022.4 - Present</em>
-                    </p>
+    <div id="app">
+        <header class="fixed-header">
+            <div class="bio-container">
+                <div class="profile-section">
+                    <img src="./files/photo/profile.jpeg" alt="profile photo" class="profile-img">
+                    <div class="bio-text">
+                        <h1>{{ $t('name') }}</h1>
+                        <p>{{ $t('bio') }}</p>
+                        <p class="links">
+                            <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
+                            <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /
+                            <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> /
+                            <a href="https://twitter.com/kaedeshioharacs" title="Twitter"><i class="fab fa-twitter"></i></a> /
+                            <a href="https://github.com/mapooon" title="Github"><i class="fab fa-github"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="lang-switch">
+                    <span 
+                        @click="setLang('en')" 
+                        :class="{ active: currentLang === 'en' }">EN</span>
+                    <span>/</span>
+                    <span 
+                        @click="setLang('ja')" 
+                        :class="{ active: currentLang === 'ja' }">JP</span>
+                </div>
+                <nav class="main-nav">
+                    <router-link to="/profile">{{ $t('nav.profile') }}</router-link>
+                    <router-link to="/publications">{{ $t('nav.publications') }}</router-link>
+                    <router-link to="/talks">{{ $t('nav.talks') }}</router-link>
+                    <router-link to="/awards">{{ $t('nav.awards') }}</router-link>
+                    <router-link to="/media">{{ $t('nav.media') }}</router-link>
+                    <router-link to="/other">{{ $t('nav.other') }}</router-link>
+                </nav>
+            </div>
+        </header>
 
-                    <p>
-                      <strong> <font size="4"> The University of Tokyo </font></strong><br>
-                      M.S. in Graduate School of Information Science and Technology<br>
-                      Department of Information and Communication Engineering<br> 
-                      Supervisor: <a href=https://www.cvm.t.u-tokyo.ac.jp/en/>Prof. Toshihiko Yamasaki</a> <br>
-                      <em>2020.4 - 2022.3</em>
-                    </p>
-                    
-                    <p>
-                      <strong> <font size="4"> Osaka City University </font></strong><br>
-                      B.S. in Under Graduate School of Engineering<br>
-                      Department of Electrical and Information Engineering<br> 
-                      Supervisor: <a href=https://ds.k.kyoto-u.ac.jp/introduction/member/hayashi/>Prof. Kazunori Hayashi</a> <br>
-                      <em>2015.4 - 2019.3</em>
-                    </p>
-                </td>
-            </tr>
-        </tbody></table>
+        <main class="content">
+            <router-view></router-view>
+        </main>
+    </div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading> <font size="6"> Experience </font></heading>
-                  <p>
-                    <strong> <font size="4"> MPI for Informatics </font></strong><br>
-                    Computer Vision Research Intern <br>
-                    Supervisor: <a href=https://people.mpi-inf.mpg.de/~golyanik/>Vladislav Golyanik</a> <br>
-                    <em>2023.11 - Present</em>
-                  </p>
-                  <p>
-                    <strong> <font size="4"> CyberAgent AI Lab </font></strong><br>
-                    Computer Vision Research Intern<br> 
-                    Mentor: <a href=https://yangxingchao.github.io/>Xingchao Yang</a><br>
-                    <em>2022.8 - 2023.10</em>
-                  </p>
-              </td>
-          </tr>
-      </tbody></table>
-        
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:left;">
-                    <heading> <font size="6"> Selected Publications </font></heading>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:left;">
-                    <papertitle><font size="4"> PetFace: A Large-Scale Dataset and Benchmark for Animal Identification </font></papertitle> <br>
-                    Risa Shinoda*, <u><strong>Kaede Shiohara</strong></u>* (*Equal contribution)<br>
-                    <em>European Conference on Computer Vision (<font color=#4169E1><strong>ECCV</strong></font>), <strong>Oral</strong>, 2024. </em> <br>
-                    [<a href="https://arxiv.org/abs/2407.13555">Paper</a>]
-                    [<a href="https://github.com/mapooon/PetFace">Code</a>]
-                    [<a href="https://dahlian00.github.io/PetFacePage/">Webpage</a>]<br><br>
-                    <!-- <img width="364.5" height="150" align="center" src="./files/teaser/eccv24_pf.png"><br><br> -->
-                    <img alt="teaser" src="./files/teaser/eccv24_pf.png" class="responsive-image">
-                </td>
-            </tr>
-    
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:left;">
-                    <papertitle><font size="4"> Face2Diffusion for Fast and Editable Face Personalization </font></papertitle> <br>
-                    <u><strong>Kaede Shiohara</strong></u>, Toshihiko Yamasaki<br>
-                    <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<font color=#4169E1><strong>CVPR</strong></font>), 2024. </em> <br>
-                    [<a href="https://arxiv.org/abs/2403.05094">Paper</a>]
-                    [<a href="https://github.com/mapooon/Face2Diffusion">Code</a>]
-                    [<a href="https://mapooon.github.io/Face2DiffusionPage/">Webpage</a>]<br><br>
-                    <img alt="teaser" src="./files/teaser/cvpr24_f2d.png" class="responsive-image"><br><br>
-                </td>
-            </tr>
-    
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:left;">
-                    <papertitle><font size="4"> BlendFace: Re-designing Identity Encoders for Face-Swapping </font></papertitle> <br>
-                    <u><strong>Kaede Shiohara</strong></u>, Xingchao Yang, Takafumi Taketomi<br>
-                    <em>IEEE/CVF International Conference on Computer Vision (<font color=#4169E1><strong>ICCV</strong></font>), 2023. </em> <br>
-                    [<a href="https://arxiv.org/abs/2307.10854">Paper</a>]
-                    [<a href="https://github.com/mapooon/BlendFace">Code</a>]
-                    [<a href="https://mapooon.github.io/BlendFacePage">Webpage</a>] <br>
-                    Work done during an internship at CyberAgent AI Lab<br><br>
-                    <img alt="teaser" src="./files/teaser/iccv23_bf.jpg" class="responsive-image"><br><br>
-                </td>
-            </tr>
-    
-            <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle;text-align:left;">
-                    <papertitle><font size="4"> Detecting Deepfakes with Self-Blended Images </font></papertitle> <br>
-                    <u><strong>Kaede Shiohara</strong></u>, Toshihiko Yamasaki<br>
-                    <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<font color=#4169E1><strong>CVPR</strong></font>), <strong>Oral</strong>, 2022. </em> <br>
-                    [<a href="https://arxiv.org/abs/2204.08376">Paper</a>]
-                    [<a href="https://github.com/mapooon/SelfBlendedImages">Code</a>]
-                    [UTokyo <a href="https://www.u-tokyo.ac.jp/focus/en/press/z0508_00221.html"> (ENG)</a> / <a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml"> (JPN)</a>]<br><br>
-                    <img alt="teaser" src="./files/teaser/cvpr22_sbi.png" class="responsive-image"><br><br>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    
-    
-    
-    
-
-    
-
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-                <heading> <font size="6"> Invited Talk </font></heading>
-                <p>
-                  <papertitle> <font size="4"> In <em>Symposium on Sensing via Image Information (SSII) 2024 </em></font></papertitle> <br>
-                  Topic: Identity-Preserving Face Generation
-                </p>
-                <p>
-                  <papertitle> <font size="4"> In <em>Visual Computing (VC) 2023 </em></font></papertitle> <br>
-                  Topic: Face-Swapping
-                </p>
-                <p>
-                  <papertitle> <font size="4"> In <em>Visual Computing (VC) 2022 </em></font></papertitle> <br>
-                  Topic: Deepfake Detection
-                </p>
-                <p>
-                  <papertitle>  <font size="4">In <em>Meeting on Image Recognition and Understanding (MIRU) 2022</em></font></papertitle> <br>
-                  Topic: Deepfake Detection
-                </p>
-                
-            </td>
-        </tr>
-    </tbody></table>
-
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading> <font size="6"> Award </font></heading>
-              <p>
-                <papertitle>  <font size="4">IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</em></font></papertitle> <br>
-                [<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]
-              </p>
-              <p>
-                <papertitle>  <font size="4">Telecom System Technology Award 2022</em></font></papertitle> <br>
-                [<a href="https://www.taf.or.jp/files/items/2080/File/listtelesys_38.pdf">Webpage</a>]
-              </p>
-              <p>
-                <papertitle>  <font size="4">Hiroshi Harashima Academic Honorable Award 2022</em></font></papertitle> <br>
-                [<a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html">Webpage</a>]
-              </p>
-              <p>
-                <papertitle>  <font size="4">IE 2022.2 Best Paper Award</em></font></papertitle> <br>
-                [<a href="https://www.ieice.org/iss/ie/jpn/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4">1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s) </em></font></papertitle> <br>
-                [<a href="https://fujifilmdatasciencechallnge.mystrikingly.com/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4">SIGNATE Competition Master </em></font></papertitle> <br>
-                [<a href="https://signate.jp/users/7175">Webpage</a>]
-              </p>
-          </td>
-      </tr>
-  </tbody></table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading> <font size="6"> Media </font></heading>
-              <p>
-                <papertitle> <font size="4"> newsランナー </font></papertitle> <br>
-                2023.7.26 TV Kansai <br>
-                [<a href="https://www.ktv.jp/runner/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4"> 60秒で学べるNews: AIが生むフェイク </font></papertitle> <br>
-                2023.1.25 TV Tokyo <br>
-                [<a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4"> 報道の日2022 </font></papertitle> <br>
-                2022.12.18 Tokyo Broadcasting System (TBS) Television <br>
-                [<a href="https://www.tbs.co.jp/houdounohi/">Webpage</a>]
-              </p>
-              
-              <p>
-                <papertitle> <font size="4"> フェイク動画を見つけ出す高性能AI </font></papertitle> <br>
-                子供の科学2022年7月号 <br>
-                [<a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4"> ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方 </font></papertitle> <br>
-                2022.7.6 毎日新聞電子版, 2022.7.7 紙面版 <br>
-                [<a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4"> 偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ </font></papertitle> <br>
-                2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面 <br>
-                [<a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/">Webpage</a>]
-              </p>
-              <p>
-                <papertitle> <font size="4"> ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～ </font></papertitle> <br>
-                2022.4.6 東京大学プレスリリース <br>
-                [<a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml">Webpage</a>]
-              </p>
-          </td>
-      </tr>
-    </tbody></table>
-
-    
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading> <font size="6"> Other Infomation </font></heading>
-              <p>
-                <papertitle> <font size="4"> Reviewer Experience </font></papertitle> <br>
-                CVPR'23 / ICCV'23 / CVPR'24 / ECCV'24
-              </p>
-              
-              
-          </td>
-      </tr>
-    </tbody></table>
-
-        
-      </td>
-    </tr>
-  </tbody></table><iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe>
-  <div id="GOOGLE_INPUT_CHEXT_FLAG" input="null" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}" style="display: none;"></div>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/router.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
 </body>
-
 </html>
