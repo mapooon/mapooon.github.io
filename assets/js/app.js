@@ -8,8 +8,11 @@ window.app = new Vue({
     },
     methods: {
         setLang(lang) {
-            this.currentLang = lang;
-            this.$i18n.locale = lang;
+            // 現在選択中の言語は選択できないようにする
+            if (lang !== this.currentLang) {
+                this.currentLang = lang;
+                this.$i18n.locale = lang;
+            }
         },
         updateHeaderHeight() {
             const header = document.querySelector('.fixed-header');

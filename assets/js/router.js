@@ -1,7 +1,30 @@
 window.routes = [
     {
         path: '/',
-        redirect: '/profile'
+        redirect: () => {
+            // PCの場合はProfileページ、モバイルの場合はHomeページにリダイレクト
+            return window.innerWidth > 768 ? '/profile' : '/';
+        },
+        component: {
+            template: `
+                <div class="home-page">
+                    <div class="bio-section">
+                        <img src="./files/photo/profile.jpeg" alt="profile photo" class="profile-img">
+                        <div class="bio-text">
+                            <h1>{{ $t('name') }}</h1>
+                            <p>{{ $t('bio') }}</p>
+                            <p class="links">
+                                <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
+                                <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /
+                                <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> /
+                                <a href="https://twitter.com/kaedeshioharacs" title="Twitter"><i class="fab fa-twitter"></i></a> /
+                                <a href="https://github.com/mapooon" title="Github"><i class="fab fa-github"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
     },
     {
         path: '/profile',
@@ -84,7 +107,7 @@ window.routes = [
                 <div class="awards-section">
                     <div class="award-item">
                         <h3>Chair's Award of Department of Information and Communication Engineering, The University of Tokyo</h3>
-                        <p>東京大学大学院 情報理工学系研究科 電子情報学専攻 博士論文 専攻長賞<br>
+                        <p>東京大学大学院 情報理工学系研究科 電子情報学専攻 博士課程 専攻長賞<br>
                         [<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]</p>
                     </div>
                     <div class="award-item">
@@ -267,5 +290,6 @@ window.routes = [
 ];
 
 window.router = new VueRouter({
-    routes
+    routes,
+    mode: 'hash'
 });

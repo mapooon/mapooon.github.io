@@ -3,6 +3,7 @@ window.messages = {
         name: 'Kaede Shiohara',
         bio: 'I am a PhD student at Computer Vision and Media Lab. I am mainly working on computer vision and pattern recognition, especially face generation and forgery detection.',
         nav: {
+            home: 'Home',
             profile: 'Profile',
             publications: 'Publications',
             talks: 'Invited Talks',
@@ -15,6 +16,7 @@ window.messages = {
         name: '塩原 楓',
         bio: '東京大学大学院 情報理工学系研究科 電子情報学専攻のコンピュータビジョンとメディア研究室の博士課程学生です。主にコンピュータビジョンとパターン認識、特に顔画像生成と偽造検出に関する研究を行っています。',
         nav: {
+            home: 'ホーム',
             profile: 'プロフィール',
             publications: '研究業績',
             talks: '招待講演',

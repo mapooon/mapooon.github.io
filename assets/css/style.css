@@ -216,9 +216,58 @@ body {
     color: #f09228;
 }
 
+/* Home Page */
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.home-page .bio-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-page .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Visibility Classes */
+.mobile-only {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .desktop-only {
+        display: flex;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .profile-section {
+    .fixed-header {
+        height: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
+    }
+
+    .content {
+        padding-top: 5rem;
+    }
+
+    .home-page .bio-section {
         flex-direction: column;
         text-align: center;
     }
@@ -231,5 +280,11 @@ body {
         overflow-x: auto;
         white-space: nowrap;
         padding-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .main-nav a {
+        font-size: 0.9rem;
+        margin-right: 1rem;
     }
 }
