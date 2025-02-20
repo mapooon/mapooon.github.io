@@ -239,12 +239,20 @@ body {
 
 /* Visibility Classes */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 @media (min-width: 769px) {
     .desktop-only {
         display: flex;
+    }
+
+    body {
+        padding-top: 250px;
+    }
+
+    .content {
+        padding-top: 2rem;
     }
 }
 
@@ -252,7 +260,11 @@ body {
 @media (max-width: 768px) {
     .fixed-header {
         height: auto;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0;
+    }
+
+    .bio-container {
+        padding: 0.5rem;
     }
 
     .desktop-only {
@@ -260,11 +272,15 @@ body {
     }
 
     .mobile-only {
-        display: inline-block;
+        display: inline-block !important;
+    }
+
+    body {
+        padding-top: 60px;
     }
 
     .content {
-        padding-top: 5rem;
+        padding: 1rem;
     }
 
     .home-page .bio-section {
@@ -279,12 +295,18 @@ body {
     .main-nav {
         overflow-x: auto;
         white-space: nowrap;
-        padding-bottom: 0.5rem;
-        margin-top: 0.5rem;
+        padding: 0.5rem 0;
+        margin-top: 0;
+        border-top: none;
     }
 
     .main-nav a {
         font-size: 0.9rem;
         margin-right: 1rem;
+    }
+
+    .lang-switch {
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }

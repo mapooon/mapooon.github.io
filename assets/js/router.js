@@ -1,30 +1,7 @@
 window.routes = [
     {
         path: '/',
-        redirect: () => {
-            // PCの場合はProfileページ、モバイルの場合はHomeページにリダイレクト
-            return window.innerWidth > 768 ? '/profile' : '/';
-        },
-        component: {
-            template: `
-                <div class="home-page">
-                    <div class="bio-section">
-                        <img src="./files/photo/profile.jpeg" alt="profile photo" class="profile-img">
-                        <div class="bio-text">
-                            <h1>{{ $t('name') }}</h1>
-                            <p>{{ $t('bio') }}</p>
-                            <p class="links">
-                                <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
-                                <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /
-                                <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> /
-                                <a href="https://twitter.com/kaedeshioharacs" title="Twitter"><i class="fab fa-twitter"></i></a> /
-                                <a href="https://github.com/mapooon" title="Github"><i class="fab fa-github"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            `
-        }
+        redirect: () => window.innerWidth > 768 ? '/profile' : '/home'
     },
     {
         path: '/profile',
@@ -76,122 +53,23 @@ window.routes = [
         }
     },
     {
-        path: '/talks',
+        path: '/home',
         component: {
             template: `
-                <div class="talks-section">
-                    <div class="talk-item">
-                        <h3>Symposium on Sensing via Image Information (SSII) 2024</h3>
-                        <p>Topic: Identity-Preserving Face Generation</p>
-                    </div>
-                    <div class="talk-item">
-                        <h3>Visual Computing (VC) 2023</h3>
-                        <p>Topic: Face-Swapping</p>
-                    </div>
-                    <div class="talk-item">
-                        <h3>Visual Computing (VC) 2022</h3>
-                        <p>Topic: Deepfake Detection</p>
-                    </div>
-                    <div class="talk-item">
-                        <h3>Meeting on Image Recognition and Understanding (MIRU) 2022</h3>
-                        <p>Topic: Deepfake Detection</p>
-                    </div>
-                </div>
-            `
-        }
-    },
-    {
-        path: '/awards',
-        component: {
-            template: `
-                <div class="awards-section">
-                    <div class="award-item">
-                        <h3>Chair's Award of Department of Information and Communication Engineering, The University of Tokyo</h3>
-                        <p>東京大学大学院 情報理工学系研究科 電子情報学専攻 博士課程 専攻長賞<br>
-                        [<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</h3>
-                        <p>[<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>Telecom System Technology Award 2022</h3>
-                        <p>テレコムシステム技術賞 一般の部 優秀賞<br>
-                        [<a href="https://www.taf.or.jp/files/items/2080/File/listtelesys_38.pdf">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>Hiroshi Harashima Academic Honorable Award 2022</h3>
-                        <p>原島博学術奨励賞<br>
-                        [<a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>IE 2022.2 Best Paper Award</h3>
-                        <p>[<a href="https://www.ieice.org/iss/ie/jpn/">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s)</h3>
-                        <p>[<a href="https://fujifilmdatasciencechallnge.mystrikingly.com/">Webpage</a>]</p>
-                    </div>
-                    <div class="award-item">
-                        <h3>SIGNATE Competition Master</h3>
-                        <p>[<a href="https://signate.jp/users/7175">Webpage</a>]</p>
-                    </div>
-                </div>
-            `
-        }
-    },
-    {
-        path: '/media',
-        component: {
-            template: `
-                <div class="media-section">
-                    <div class="media-item">
-                        <h3>newsランナー</h3>
-                        <p>2023.7.26 TV Kansai<br>
-                        [<a href="https://www.ktv.jp/runner/">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>60秒で学べるNews: AIが生むフェイク</h3>
-                        <p>2023.1.25 TV Tokyo<br>
-                        [<a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>報道の日2022</h3>
-                        <p>2022.12.18 Tokyo Broadcasting System (TBS) Television<br>
-                        [<a href="https://www.tbs.co.jp/houdounohi/">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>フェイク動画を見つけ出す高性能AI</h3>
-                        <p>子供の科学2022年7月号<br>
-                        [<a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方</h3>
-                        <p>2022.7.6 毎日新聞電子版, 2022.7.7 紙面版<br>
-                        [<a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ</h3>
-                        <p>2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面<br>
-                        [<a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/">Webpage</a>]</p>
-                    </div>
-                    <div class="media-item">
-                        <h3>ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～</h3>
-                        <p>2022.4.6 東京大学プレスリリース<br>
-                        [<a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml">Webpage</a>]</p>
-                    </div>
-                </div>
-            `
-        }
-    },
-    {
-        path: '/other',
-        component: {
-            template: `
-                <div class="other-section">
-                    <div class="other-item">
-                        <h3>Reviewer Experience</h3>
-                        <p>CVPR'23 / ICCV'23 / CVPR'24 / ECCV'24 / CVPR'25 / ICCV'25</p>
+                <div class="home-page">
+                    <div class="bio-section">
+                        <img src="./files/photo/profile.jpeg" alt="profile photo" class="profile-img">
+                        <div class="bio-text">
+                            <h1>{{ $t('name') }}</h1>
+                            <p>{{ $t('bio') }}</p>
+                            <p class="links">
+                                <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
+                                <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /
+                                <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> /
+                                <a href="https://twitter.com/kaedeshioharacs" title="Twitter"><i class="fab fa-twitter"></i></a> /
+                                <a href="https://github.com/mapooon" title="Github"><i class="fab fa-github"></i></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             `
@@ -282,6 +160,123 @@ window.routes = [
                         </div>
                         <img :src="selectedPaper.image" :alt="selectedPaper.title">
                         <p v-if="selectedPaper.abstract">{{ selectedPaper.abstract }}</p>
+                    </div>
+                </div>
+            `
+        }
+    },
+    {
+        path: '/talks',
+        component: {
+            template: `
+                <div class="talks-section">
+                    <div class="talk-item">
+                        <h3>Symposium on Sensing via Image Information (SSII) 2024</h3>
+                        <p>Topic: Identity-Preserving Face Generation</p>
+                    </div>
+                    <div class="talk-item">
+                        <h3>Visual Computing (VC) 2023</h3>
+                        <p>Topic: Face-Swapping</p>
+                    </div>
+                    <div class="talk-item">
+                        <h3>Visual Computing (VC) 2022</h3>
+                        <p>Topic: Deepfake Detection</p>
+                    </div>
+                    <div class="talk-item">
+                        <h3>Meeting on Image Recognition and Understanding (MIRU) 2022</h3>
+                        <p>Topic: Deepfake Detection</p>
+                    </div>
+                </div>
+            `
+        }
+    },
+    {
+        path: '/awards',
+        component: {
+            template: `
+                <div class="awards-section">
+                    <div class="award-item">
+                        <h3>IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</h3>
+                        <p>[<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]</p>
+                    </div>
+                    <div class="award-item">
+                        <h3>Telecom System Technology Award 2022</h3>
+                        <p>テレコムシステム技術賞 一般の部 優秀賞<br>
+                        [<a href="https://www.taf.or.jp/files/items/2080/File/listtelesys_38.pdf">Webpage</a>]</p>
+                    </div>
+                    <div class="award-item">
+                        <h3>Hiroshi Harashima Academic Honorable Award 2022</h3>
+                        <p>原島博学術奨励賞<br>
+                        [<a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html">Webpage</a>]</p>
+                    </div>
+                    <div class="award-item">
+                        <h3>IE 2022.2 Best Paper Award</h3>
+                        <p>[<a href="https://www.ieice.org/iss/ie/jpn/">Webpage</a>]</p>
+                    </div>
+                    <div class="award-item">
+                        <h3>1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s)</h3>
+                        <p>[<a href="https://fujifilmdatasciencechallnge.mystrikingly.com/">Webpage</a>]</p>
+                    </div>
+                    <div class="award-item">
+                        <h3>SIGNATE Competition Master</h3>
+                        <p>[<a href="https://signate.jp/users/7175">Webpage</a>]</p>
+                    </div>
+                </div>
+            `
+        }
+    },
+    {
+        path: '/media',
+        component: {
+            template: `
+                <div class="media-section">
+                    <div class="media-item">
+                        <h3>newsランナー</h3>
+                        <p>2023.7.26 TV Kansai<br>
+                        [<a href="https://www.ktv.jp/runner/">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>60秒で学べるNews: AIが生むフェイク</h3>
+                        <p>2023.1.25 TV Tokyo<br>
+                        [<a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>報道の日2022</h3>
+                        <p>2022.12.18 Tokyo Broadcasting System (TBS) Television<br>
+                        [<a href="https://www.tbs.co.jp/houdounohi/">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>フェイク動画を見つけ出す高性能AI</h3>
+                        <p>子供の科学2022年7月号<br>
+                        [<a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方</h3>
+                        <p>2022.7.6 毎日新聞電子版, 2022.7.7 紙面版<br>
+                        [<a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ</h3>
+                        <p>2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面<br>
+                        [<a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/">Webpage</a>]</p>
+                    </div>
+                    <div class="media-item">
+                        <h3>ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～</h3>
+                        <p>2022.4.6 東京大学プレスリリース<br>
+                        [<a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml">Webpage</a>]</p>
+                    </div>
+                </div>
+            `
+        }
+    },
+    {
+        path: '/other',
+        component: {
+            template: `
+                <div class="other-section">
+                    <div class="other-item">
+                        <h3>Reviewer Experience</h3>
+                        <p>CVPR'23 / ICCV'23 / CVPR'24 / ECCV'24 / CVPR'25 / ICCV'25</p>
                     </div>
                 </div>
             `
