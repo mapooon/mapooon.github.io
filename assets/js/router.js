@@ -87,7 +87,7 @@ window.routes = [
                             authors: 'Risa Shinoda*, Kaede Shiohara* (*Equal contribution)',
                             conference: 'European Conference on Computer Vision (ECCV) 2024',
                             acceptance_rate: '2.3% (Oral)',
-                            image: './files/teaser/eccv24_pf.png',
+                            image: './files/teaser/eccv24_pf.jpg',
                             links: {
                                 paper: 'https://arxiv.org/abs/2407.13555',
                                 code: 'https://github.com/mapooon/PetFace',
@@ -126,7 +126,7 @@ window.routes = [
                             authors: 'Kaede Shiohara, Toshihiko Yamasaki',
                             conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2022',
                             acceptance_rate: '4.2% (Oral)',
-                            image: './files/teaser/cvpr22_sbi.png',
+                            image: './files/teaser/cvpr22_sbi.jpg',
                             links: {
                                 paper: 'https://arxiv.org/abs/2204.08376',
                                 code: 'https://github.com/mapooon/SelfBlendedImages'
