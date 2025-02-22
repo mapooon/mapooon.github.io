@@ -206,6 +206,13 @@ body {
     overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    .publication-details {
+        overflow-y: visible;
+        height: auto;
+    }
+}
+
 .publication-details img {
     max-width: 100%;
     height: auto;
