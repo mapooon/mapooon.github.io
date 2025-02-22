@@ -100,7 +100,7 @@ window.routes = [
                             authors: 'Kaede Shiohara, Toshihiko Yamasaki',
                             conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024',
                             acceptance_rate: '23.6%',
-                            image: './files/teaser/cvpr24_f2d.png',
+                            image: './files/teaser/cvpr24_f2d.jpg',
                             links: {
                                 paper: 'https://arxiv.org/abs/2403.05094',
                                 code: 'https://github.com/mapooon/Face2Diffusion',
