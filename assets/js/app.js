@@ -32,10 +32,9 @@ window.app = new Vue({
         }
     },
     mounted() {
-        // Set initial language based on browser preference
-        const userLang = navigator.language || navigator.userLanguage;
-        this.currentLang = userLang.startsWith('ja') ? 'ja' : 'en';
-        this.$i18n.locale = this.currentLang;
+        // デフォルト言語をENに設定
+        this.currentLang = 'en';
+        this.$i18n.locale = 'en';
 
         // Initial header height update
         this.updateHeaderHeight();

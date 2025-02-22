@@ -1,4 +1,4 @@
-window.messages = {
+const messages = {
     en: {
         name: 'Kaede Shiohara',
         bio: 'I am a PhD student at Computer Vision and Media Lab. I am mainly working on computer vision and pattern recognition, especially face generation and forgery detection.',
@@ -9,16 +9,16 @@ window.messages = {
             talks: 'Invited Talks',
             awards: 'Awards',
             media: 'Media',
-            other: 'Other'
+            other: 'Others'
         }
     },
     ja: {
         name: '塩原 楓',
-        bio: '東京大学大学院 情報理工学系研究科 電子情報学専攻のコンピュータビジョンとメディア研究室の博士課程学生です。主にコンピュータビジョンとパターン認識、特に顔画像生成と偽造検出に関する研究を行っています。',
+        bio: '東京大学山﨑研究室に所属する博士課程の学生です。コンピュータビジョンとパターン認識の研究を行っており、特に人物画像生成と偽造検出に取り組んでいます。',
         nav: {
             home: 'ホーム',
             profile: 'プロフィール',
-            publications: '研究業績',
+            publications: '論文',
             talks: '招待講演',
             awards: '受賞',
             media: 'メディア',

@@ -85,7 +85,8 @@ window.routes = [
                         {
                             title: 'PetFace: A Large-Scale Dataset and Benchmark for Animal Identification',
                             authors: 'Risa Shinoda*, Kaede Shiohara* (*Equal contribution)',
-                            conference: 'European Conference on Computer Vision (ECCV), Oral, 2024',
+                            conference: 'European Conference on Computer Vision (ECCV) 2024',
+                            acceptance_rate: '2.3% (Oral)',
                             image: './files/teaser/eccv24_pf.png',
                             links: {
                                 paper: 'https://arxiv.org/abs/2407.13555',
@@ -97,7 +98,8 @@ window.routes = [
                         {
                             title: 'Face2Diffusion for Fast and Editable Face Personalization',
                             authors: 'Kaede Shiohara, Toshihiko Yamasaki',
-                            conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024',
+                            conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024',
+                            acceptance_rate: '23.6%',
                             image: './files/teaser/cvpr24_f2d.png',
                             links: {
                                 paper: 'https://arxiv.org/abs/2403.05094',
@@ -109,7 +111,8 @@ window.routes = [
                         {
                             title: 'BlendFace: Re-designing Identity Encoders for Face-Swapping',
                             authors: 'Kaede Shiohara, Xingchao Yang, Takafumi Taketomi',
-                            conference: 'IEEE/CVF International Conference on Computer Vision (ICCV), 2023',
+                            conference: 'IEEE/CVF International Conference on Computer Vision (ICCV) 2023',
+                            acceptance_rate: '26.2%',
                             image: './files/teaser/iccv23_bf.jpg',
                             links: {
                                 paper: 'https://arxiv.org/abs/2307.10854',
@@ -121,7 +124,8 @@ window.routes = [
                         {
                             title: 'Detecting Deepfakes with Self-Blended Images',
                             authors: 'Kaede Shiohara, Toshihiko Yamasaki',
-                            conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Oral, 2022',
+                            conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2022',
+                            acceptance_rate: '4.2% (Oral)',
                             image: './files/teaser/cvpr22_sbi.png',
                             links: {
                                 paper: 'https://arxiv.org/abs/2204.08376',
@@ -147,16 +151,18 @@ window.routes = [
                              :class="['publication-item', selectedPaper === paper ? 'active' : '']">
                             <h3>{{ paper.title }}</h3>
                             <p><small>{{ paper.conference }}</small></p>
+                            <p><small>Acceptance Rate: {{ paper.acceptance_rate }}</small></p>
                         </div>
                     </div>
                     <div class="publication-details" v-if="selectedPaper">
                         <h2>{{ selectedPaper.title }}</h2>
                         <p>{{ selectedPaper.authors }}</p>
                         <p><em>{{ selectedPaper.conference }}</em></p>
+                        <p><small>Acceptance Rate: {{ selectedPaper.acceptance_rate }}</small></p>
                         <div class="paper-links">
-                            <a v-if="selectedPaper.links.paper" :href="selectedPaper.links.paper" class="paper-link">[Paper]</a>
-                            <a v-if="selectedPaper.links.code" :href="selectedPaper.links.code" class="paper-link">[Code]</a>
-                            <a v-if="selectedPaper.links.webpage" :href="selectedPaper.links.webpage" class="paper-link">[Project Page]</a>
+                            <a v-if="selectedPaper.links.paper" :href="selectedPaper.links.paper" class="paper-link">Paper</a>
+                            <a v-if="selectedPaper.links.code" :href="selectedPaper.links.code" class="paper-link">Code</a>
+                            <a v-if="selectedPaper.links.webpage" :href="selectedPaper.links.webpage" class="paper-link">Project Page</a>
                         </div>
                         <img :src="selectedPaper.image" :alt="selectedPaper.title">
                         <p v-if="selectedPaper.abstract">{{ selectedPaper.abstract }}</p>
@@ -197,29 +203,29 @@ window.routes = [
                 <div class="awards-section">
                     <div class="award-item">
                         <h3>IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</h3>
-                        <p>[<a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024">Webpage</a>]</p>
+                        <p><a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>Telecom System Technology Award 2022</h3>
                         <p>テレコムシステム技術賞 一般の部 優秀賞<br>
-                        [<a href="https://www.taf.or.jp/files/items/2080/File/listtelesys_38.pdf">Webpage</a>]</p>
+                        <a href="https://www.taf.or.jp/files/items/2080/File/listtelesys_38.pdf" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>Hiroshi Harashima Academic Honorable Award 2022</h3>
                         <p>原島博学術奨励賞<br>
-                        [<a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html">Webpage</a>]</p>
+                        <a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>IE 2022.2 Best Paper Award</h3>
-                        <p>[<a href="https://www.ieice.org/iss/ie/jpn/">Webpage</a>]</p>
+                        <p><a href="https://www.ieice.org/iss/ie/jpn/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s)</h3>
-                        <p>[<a href="https://fujifilmdatasciencechallnge.mystrikingly.com/">Webpage</a>]</p>
+                        <p><a href="https://fujifilmdatasciencechallnge.mystrikingly.com/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>SIGNATE Competition Master</h3>
-                        <p>[<a href="https://signate.jp/users/7175">Webpage</a>]</p>
+                        <p><a href="https://signate.jp/users/7175" class="webpage-link">Webpage</a></p>
                     </div>
                 </div>
             `
@@ -233,37 +239,37 @@ window.routes = [
                     <div class="media-item">
                         <h3>newsランナー</h3>
                         <p>2023.7.26 TV Kansai<br>
-                        [<a href="https://www.ktv.jp/runner/">Webpage</a>]</p>
+                        <a href="https://www.ktv.jp/runner/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>60秒で学べるNews: AIが生むフェイク</h3>
                         <p>2023.1.25 TV Tokyo<br>
-                        [<a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/">Webpage</a>]</p>
+                        <a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>報道の日2022</h3>
                         <p>2022.12.18 Tokyo Broadcasting System (TBS) Television<br>
-                        [<a href="https://www.tbs.co.jp/houdounohi/">Webpage</a>]</p>
+                        <a href="https://www.tbs.co.jp/houdounohi/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>フェイク動画を見つけ出す高性能AI</h3>
                         <p>子供の科学2022年7月号<br>
-                        [<a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/">Webpage</a>]</p>
+                        <a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方</h3>
                         <p>2022.7.6 毎日新聞電子版, 2022.7.7 紙面版<br>
-                        [<a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c">Webpage</a>]</p>
+                        <a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ</h3>
                         <p>2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面<br>
-                        [<a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/">Webpage</a>]</p>
+                        <a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="media-item">
                         <h3>ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～</h3>
                         <p>2022.4.6 東京大学プレスリリース<br>
-                        [<a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml">Webpage</a>]</p>
+                        <a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml" class="webpage-link">Webpage</a></p>
                     </div>
                 </div>
             `

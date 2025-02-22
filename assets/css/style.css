@@ -179,6 +179,16 @@ body {
     transition: all 0.3s ease;
 }
 
+.publication-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.publication-item small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
 .publication-item:hover {
     border-color: #1772d0;
     transform: translateX(5px);
@@ -202,18 +212,32 @@ body {
     margin: 1rem 0;
 }
 
+.publication-details small {
+    color: #666;
+    font-size: 0.85rem;
+}
+
 .paper-links {
     margin-top: 1.5rem;
 }
 
-.paper-link {
-    font-size: 1.2rem;
-    margin-right: 1rem;
+.paper-link, .webpage-link {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.8rem;
+    font-size: 0.85rem;
     font-weight: bold;
+    color: #1772d0;
+    background-color: #fff;
+    border: 2px solid #1772d0;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.paper-link:hover {
-    color: #f09228;
+.paper-link:hover, .webpage-link:hover {
+    color: #fff;
+    background-color: #1772d0;
 }
 
 /* Home Page */
