@@ -312,9 +312,30 @@ body {
         text-align: center;
     }
 
-    .publications-container {
-        grid-template-columns: 1fr;
-    }
+.publications-container {
+    grid-template-columns: 1fr;
+}
+
+.publications-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+}
+
+.publication-item {
+    display: inline-block;
+    width: 300px;
+    white-space: normal;
+    vertical-align: top;
+}
+
+.main-nav a.router-link-exact-active {
+    color: #1772d0;
+}
+
+.main-nav a.router-link-active:not(.router-link-exact-active) {
+    color: inherit;
+}
 
     .main-nav {
         overflow-x: auto;

@@ -1,7 +1,8 @@
 window.routes = [
     {
         path: '/',
-        redirect: () => window.innerWidth > 768 ? '/profile' : '/home'
+        redirect: () => window.innerWidth > 768 ? '/profile' : '/home',
+        name: 'root'
     },
     {
         path: '/profile',
@@ -54,6 +55,7 @@ window.routes = [
     },
     {
         path: '/home',
+        name: 'home',
         component: {
             template: `
                 <div class="home-page">
