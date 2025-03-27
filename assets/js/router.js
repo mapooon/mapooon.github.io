@@ -205,7 +205,7 @@ window.routes = [
                 <div class="awards-section">
                     <div class="award-item">
                         <h3>Doctor Thesis Department Chair's Award at the University of Tokyo</h3>
-                        <p>東京大学情報李工学系研究科電子情報学専攻 博士論文専攻長賞<br>
+                        <p>東京大学情報理工学系研究科電子情報学専攻 博士論文専攻長賞<br>
                     </div>
                     <div class="award-item">
                         <h3>IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</h3>
