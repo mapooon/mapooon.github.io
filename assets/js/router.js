@@ -16,7 +16,7 @@ window.routes = [
                             <p>Ph.D. in Graduate School of Information Science and Technology<br>
                             Department of Information and Communication Engineering<br>
                             Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
-                            <em>2022.4 - Present</em></p>
+                            <em>2022.4 - 2025.3</em></p>
                         </div>
                         <div class="education-item">
                             <h3>The University of Tokyo</h3>
@@ -203,6 +203,10 @@ window.routes = [
         component: {
             template: `
                 <div class="awards-section">
+                    <div class="award-item">
+                        <h3>Doctor Thesis Department Chair's Award at the University of Tokyo</h3>
+                        <p>東京大学情報李工学系研究科電子情報学専攻 博士論文専攻長賞<br>
+                    </div>
                     <div class="award-item">
                         <h3>IEEE CS Tokyo/Japan Joint Local Chapters Young Author Award 2024</h3>
                         <p><a href="https://www.ieee-jp.org/section/tokyo/chapter/C-16/#YAA2024" class="webpage-link">Webpage</a></p>

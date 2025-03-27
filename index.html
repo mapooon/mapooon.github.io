@@ -19,7 +19,7 @@
                     <img src="./files/photo/profile.jpeg" alt="profile photo" class="profile-img">
                     <div class="bio-text">
                         <h1>{{ $t('name') }}</h1>
-                        <p>{{ $t('bio') }}</p>
+                        <p v-html="$t('bio')"></p>
                         <p class="links">
                             <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
                             <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /

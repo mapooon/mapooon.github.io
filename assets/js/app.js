@@ -33,8 +33,8 @@ window.app = new Vue({
     },
     mounted() {
         // デフォルト言語をENに設定
-        this.currentLang = 'en';
-        this.$i18n.locale = 'en';
+        this.currentLang = 'ja';
+        this.$i18n.locale = 'ja';
 
         // Initial header height update
         this.updateHeaderHeight();
