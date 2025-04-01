@@ -152,9 +152,29 @@ body {
 .experience-item,
 .talk-item,
 .award-item,
-.media-item,
 .other-item {
     margin-bottom: 2.5rem;
+}
+
+.media-item {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.media-item img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.awards-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #1772d0;
 }
 
 .education-item h3,

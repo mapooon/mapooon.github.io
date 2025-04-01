@@ -21,7 +21,7 @@ const messages = {
             publications: '論文',
             talks: '招待講演',
             awards: '受賞',
-            media: 'メディア',
+            media: 'メディア掲載',
             other: 'その他'
         }
     }

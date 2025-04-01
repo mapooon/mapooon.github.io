@@ -203,6 +203,7 @@ window.routes = [
         component: {
             template: `
                 <div class="awards-section">
+                    <h2>Awards</h2>
                     <div class="award-item">
                         <h3>Doctor Thesis Department Chair's Award at the University of Tokyo</h3>
                         <p>東京大学情報理工学系研究科電子情報学専攻 博士論文専攻長賞<br>
@@ -221,10 +222,23 @@ window.routes = [
                         <p>原島博学術奨励賞<br>
                         <a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html" class="webpage-link">Webpage</a></p>
                     </div>
+                    <h2>Conference Awards</h2>
+                    <div class="award-item">
+                        <h3>MIRU 2024 Student Encouragement Award</h3>
+                        <p>MIRU学生奨励賞<br>
+                        <p><a href="https://miru-committee.github.io/miru2024/author/award/" class="webpage-link">Webpage</a></p>
+                    </div>
+                    <div class="award-item">
+                        <h3>MIRU 2023 Student Encouragement Award</h3>
+                        <p>MIRU学生奨励賞<br>
+                        <p><a href="https://cvim.ipsj.or.jp/MIRU2023/award/" class="webpage-link">Webpage</a></p>
+                    </div>
                     <div class="award-item">
                         <h3>IE 2022.2 Best Paper Award</h3>
+                        <p>IE賞<br>
                         <p><a href="https://www.ieice.org/iss/ie/jpn/" class="webpage-link">Webpage</a></p>
                     </div>
+                    <h2>Others</h2>
                     <div class="award-item">
                         <h3>1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s)</h3>
                         <p><a href="https://fujifilmdatasciencechallnge.mystrikingly.com/" class="webpage-link">Webpage</a></p>
@@ -243,39 +257,63 @@ window.routes = [
             template: `
                 <div class="media-section">
                     <div class="media-item">
-                        <h3>newsランナー</h3>
-                        <p>2023.7.26 TV Kansai<br>
-                        <a href="https://www.ktv.jp/runner/" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>newsランナー</h3>
+                            <p>2023.7.26 TV Kansai<br>
+                            <a href="https://www.ktv.jp/runner/" class="webpage-link">Webpage</a></p>
+                        </div>
+                        <img src="./files/coverage/newsrunner.jpg" alt="newsランナー">
                     </div>
                     <div class="media-item">
-                        <h3>60秒で学べるNews: AIが生むフェイク</h3>
-                        <p>2023.1.25 TV Tokyo<br>
-                        <a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>フジテレビ日曜報道 THE PRIME</h3>
+                            <p>2023.6.4 TV Fuji<br>
+                            <a href="https://www.fujitv.co.jp/b_hp/nichiyouhoudou_theprime/" class="webpage-link">Webpage</a></p>
+                        </div>
+                        <img src="./files/coverage/sunday.jpg" alt="the prime">
                     </div>
                     <div class="media-item">
-                        <h3>報道の日2022</h3>
-                        <p>2022.12.18 Tokyo Broadcasting System (TBS) Television<br>
-                        <a href="https://www.tbs.co.jp/houdounohi/" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>60秒で学べるNews: AIが生むフェイク</h3>
+                            <p>2023.1.25 TV Tokyo<br>
+                            <a href="https://www.tv-tokyo.co.jp/60sec_news/backnumber/20230125/" class="webpage-link">Webpage</a></p>
+                        </div>
+                        <img src="./files/coverage/60news.jpg" alt="60news">
                     </div>
                     <div class="media-item">
-                        <h3>フェイク動画を見つけ出す高性能AI</h3>
-                        <p>子供の科学2022年7月号<br>
-                        <a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>報道の日2022</h3>
+                            <p>2022.12.18 Tokyo Broadcasting System (TBS) Television<br>
+                            <a href="https://www.tbs.co.jp/houdounohi/" class="webpage-link">Webpage</a></p>
+                        </div>
                     </div>
                     <div class="media-item">
-                        <h3>ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方</h3>
-                        <p>2022.7.6 毎日新聞電子版, 2022.7.7 紙面版<br>
-                        <a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>フェイク動画を見つけ出す高性能AI</h3>
+                            <p>子供の科学2022年7月号<br>
+                            <a href="https://www.seibundo-shinkosha.net/magazine/kids/71745/" class="webpage-link">Webpage</a></p>
+                        </div>
                     </div>
                     <div class="media-item">
-                        <h3>偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ</h3>
-                        <p>2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面<br>
-                        <a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>ディープフェイク見破れ　東大開発で脚光　「合成の跡」の見つけ方</h3>
+                            <p>2022.7.6 毎日新聞電子版, 2022.7.7 紙面版<br>
+                            <a href="https://mainichi.jp/articles/20220704/k00/00m/040/113000c" class="webpage-link">Webpage</a></p>
+                        </div>
                     </div>
                     <div class="media-item">
-                        <h3>ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～</h3>
-                        <p>2022.4.6 東京大学プレスリリース<br>
-                        <a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml" class="webpage-link">Webpage</a></p>
+                        <div>
+                            <h3>偽動画、東京大学は検出精度9割　米メタも封じ込め急ぐ</h3>
+                            <p>2022.6.6 日経新聞電子版, 2022.6.7 紙面版16面<br>
+                            <a href="https://www.nikkei.com/article/DGXZQOUC232VF0T20C22A5000000/" class="webpage-link">Webpage</a></p>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <div>
+                            <h3>ディープフェイクの検出で世界最高性能を達成 ～SBIsでディープフェイク動画の高精度判定を可能に～</h3>
+                            <p>2022.4.6 東京大学プレスリリース<br>
+                            <a href="https://www.i.u-tokyo.ac.jp/news/press/2022/202204262039.shtml" class="webpage-link">Webpage</a></p>
+                        </div>
                     </div>
                 </div>
             `
