@@ -222,22 +222,33 @@ window.routes = [
                         <p>原島博学術奨励賞<br>
                         <a href="http://denkidenshi.or.jp/syorei-harashima-jyusyo.html" class="webpage-link">Webpage</a></p>
                     </div>
+
                     <h2>Conference Awards</h2>
+                    <div class="award-item">
+                        <h3>MVE 2025.4 Best Paper Award</h3>
+                        <p>MVE賞<br>
+                        <p>ジェ エン トイ サン ジャ, 塩原楓, 山崎俊彦, 都賀美有紀, 飛谷謙介, 長田典子, "Stable Diffusion を用いた印象駆動型柄生成"<br>
+                        <p><a href="https://www.ieice.org/~mve/award.html" class="webpage-link">Webpage</a></p>
+                    </div>
                     <div class="award-item">
                         <h3>MIRU 2024 Student Encouragement Award</h3>
                         <p>MIRU学生奨励賞<br>
+                        <p>篠田理沙*, 塩原楓* (*Equal contribution), "動物の顔認識に対する大規模データセット構築"<br>
                         <p><a href="https://miru-committee.github.io/miru2024/author/award/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>MIRU 2023 Student Encouragement Award</h3>
                         <p>MIRU学生奨励賞<br>
+                        <p>塩原楓, 小杉哲, 山崎俊彦, "単一ステージモデルによる遮蔽物を考慮した顔交換"<br>
                         <p><a href="https://cvim.ipsj.or.jp/MIRU2023/award/" class="webpage-link">Webpage</a></p>
                     </div>
                     <div class="award-item">
                         <h3>IE 2022.2 Best Paper Award</h3>
                         <p>IE賞<br>
+                        <p>塩原楓, 山崎俊彦, "汎用的なディープフェイク検出のための自己ブレンディング拡張"<br>
                         <p><a href="https://www.ieice.org/iss/ie/jpn/" class="webpage-link">Webpage</a></p>
                     </div>
+                    
                     <h2>Others</h2>
                     <div class="award-item">
                         <h3>1st place at 6th Brain(s) Contest by FUJIFILM AI Academy Brain(s)</h3>
