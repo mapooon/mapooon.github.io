@@ -225,7 +225,7 @@ window.routes = [
 
                     <h2>Conference Awards</h2>
                     <div class="award-item">
-                        <h3>MVE 2025.4 Best Paper Award</h3>
+                        <h3>MVE 2025.3 Best Paper Award</h3>
                         <p>MVE賞<br>
                         <p>ジェ エン トイ サン ジャ, 塩原楓, 山崎俊彦, 都賀美有紀, 飛谷謙介, 長田典子, "Stable Diffusion を用いた印象駆動型柄生成"<br>
                         <p><a href="https://www.ieice.org/~mve/award.html" class="webpage-link">Webpage</a></p>
