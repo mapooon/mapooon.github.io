@@ -12,22 +12,22 @@ window.routes = [
                     <section class="education-section">
                         <h2>Education</h2>
                         <div class="education-item">
-                            <h3>The University of Tokyo</h3>
-                            <p>Ph.D. in Graduate School of Information Science and Technology<br>
+                            <h3>Ph.D. at the University of Tokyo</h3>
+                            <p>Graduate School of Information Science and Technology<br>
                             Department of Information and Communication Engineering<br>
                             Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
                             <em>2022.4 - 2025.3</em></p>
                         </div>
                         <div class="education-item">
-                            <h3>The University of Tokyo</h3>
-                            <p>M.S. in Graduate School of Information Science and Technology<br>
+                            <h3>M.S. at the University of Tokyo</h3>
+                            <p>Graduate School of Information Science and Technology<br>
                             Department of Information and Communication Engineering<br>
                             Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
                             <em>2020.4 - 2022.3</em></p>
                         </div>
                         <div class="education-item">
-                            <h3>Osaka City University</h3>
-                            <p>B.S. in Under Graduate School of Engineering<br>
+                            <h3>B.S. at Osaka City University</h3>
+                            <p>Under Graduate School of Engineering<br>
                             Department of Electrical and Information Engineering<br>
                             Supervisor: <a href="https://ds.k.kyoto-u.ac.jp/introduction/member/hayashi/">Prof. Kazunori Hayashi</a><br>
                             <em>2015.4 - 2019.3</em></p>
@@ -37,14 +37,17 @@ window.routes = [
                     <section class="experience-section">
                         <h2>Experience</h2>
                         <div class="experience-item">
-                            <h3>MPI for Informatics</h3>
-                            <p>Computer Vision Research Intern<br>
-                            Supervisor: <a href="https://people.mpi-inf.mpg.de/~golyanik/">Vladislav Golyanik</a><br>
-                            <em>2023.11 - Present</em></p>
+                            <h3>Post Doctor at the University of Tokyo</h3>
+                            Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
+                            <em>2025.4 - Present</em></p>
                         </div>
                         <div class="experience-item">
-                            <h3>CyberAgent AI Lab</h3>
-                            <p>Computer Vision Research Intern<br>
+                            <h3>Computer Vision Research Internship at MPI for Informatics</h3>
+                            Supervisor: <a href="https://people.mpi-inf.mpg.de/~golyanik/">Dr. Vladislav Golyanik</a><br>
+                            <em>2023.11 - 2025.3</em></p>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Computer Vision Research Internship at CyberAgent AI Lab</h3>
                             Mentor: <a href="https://yangxingchao.github.io/">Xingchao Yang</a><br>
                             <em>2022.8 - 2023.10</em></p>
                         </div>
@@ -86,7 +89,7 @@ window.routes = [
                     papers: [
                         {
                             title: 'PetFace: A Large-Scale Dataset and Benchmark for Animal Identification',
-                            authors: 'Risa Shinoda*, Kaede Shiohara* (*Equal contribution)',
+                            authors: 'Risa Shinoda*, <strong>Kaede Shiohara*</strong> (*Equal contribution)',
                             conference: 'European Conference on Computer Vision (ECCV) 2024',
                             acceptance_rate: '2.3% (Oral)',
                             image: './files/teaser/eccv24_pf.jpg',
@@ -99,7 +102,7 @@ window.routes = [
                         },
                         {
                             title: 'Face2Diffusion for Fast and Editable Face Personalization',
-                            authors: 'Kaede Shiohara, Toshihiko Yamasaki',
+                            authors: '<strong>Kaede Shiohara</strong>, Toshihiko Yamasaki',
                             conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024',
                             acceptance_rate: '23.6%',
                             image: './files/teaser/cvpr24_f2d.jpg',
@@ -112,7 +115,7 @@ window.routes = [
                         },
                         {
                             title: 'BlendFace: Re-designing Identity Encoders for Face-Swapping',
-                            authors: 'Kaede Shiohara, Xingchao Yang, Takafumi Taketomi',
+                            authors: '<strong>Kaede Shiohara</strong>, Xingchao Yang, Takafumi Taketomi',
                             conference: 'IEEE/CVF International Conference on Computer Vision (ICCV) 2023',
                             acceptance_rate: '26.2%',
                             image: './files/teaser/iccv23_bf.jpg',
@@ -125,7 +128,7 @@ window.routes = [
                         },
                         {
                             title: 'Detecting Deepfakes with Self-Blended Images',
-                            authors: 'Kaede Shiohara, Toshihiko Yamasaki',
+                            authors: '<strong>Kaede Shiohara</strong>, Toshihiko Yamasaki',
                             conference: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2022',
                             acceptance_rate: '4.2% (Oral)',
                             image: './files/teaser/cvpr22_sbi.jpg',
@@ -158,7 +161,7 @@ window.routes = [
                     </div>
                     <div class="publication-details" v-if="selectedPaper">
                         <h2>{{ selectedPaper.title }}</h2>
-                        <p>{{ selectedPaper.authors }}</p>
+                        <p v-html="selectedPaper.authors"></p>
                         <p><em>{{ selectedPaper.conference }}</em></p>
                         <p><small>Acceptance Rate: {{ selectedPaper.acceptance_rate }}</small></p>
                         <div class="paper-links">
