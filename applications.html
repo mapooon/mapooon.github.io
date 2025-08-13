@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Applications - Kaede Shiohara</title>
+    <meta name="author" content="Kaede Shiohara">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Kaede Shiohara</a>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="applications.html" class="active">Applications</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="publications-section">
+            <h2>Face Generation AI</h2>
+            <div class="publication-item">
+                <h3>FaceSwap</h3>
+                <video controls width="100%">
+                    <source src="./files/application_videos/faceswap.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="publication-item">
+                <h3>Text + Face -> Image</h3>
+                <video controls width="100%">
+                    <source src="./files/application_videos/text+face2image.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="publication-item">
+                <h3>Audio -> Face</h3>
+                <video controls width="100%">
+                    <source src="./files/application_videos/audio2face.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="publications-section">
+            <h2>Others</h2>
+            <div class="publication-item">
+                <p>Under Construction</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Add active class to current page in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = window.location.pathname;
+            const navLinks = document.querySelectorAll('.main-nav a');
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (currentLocation.endsWith(linkPath)) {
+                    link.classList.add('active');
+                } else if (currentLocation.endsWith('/') && linkPath === 'index.html') {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
