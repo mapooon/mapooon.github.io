@@ -245,6 +245,12 @@ section h2 {
     max-width: 300px;
     height: 100px;
     border: 1px solid #eee;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.media-item img:hover {
+    opacity: 0.8;
 }
 
 /* Responsive Design */
