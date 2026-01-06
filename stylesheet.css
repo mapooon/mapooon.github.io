@@ -294,4 +294,37 @@ section h2 {
         max-width: 300px;
         margin: 0 auto 1rem;
     }
+    
+}
+
+.collapsible-section {
+    margin-bottom: 3rem;
+}
+
+.collapsible-section > summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #1772d0;
+    padding-bottom: 0.5rem;
+}
+
+.collapsible-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+.collapsible-section > summary::after {
+    content: "+";
+    float: right;
+    font-weight: 700;
+}
+
+.collapsible-section[open] > summary::after {
+    content: "-";
+}
+
+.collapsible-content {
+    padding-top: 0.5rem;
 }

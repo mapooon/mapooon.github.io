@@ -16,7 +16,7 @@
             </div>
             <nav class="main-nav">
                 <a href="index.html" class="active">About</a>
-                <a href="publications.html">Publications</a>
+                <a href="achievements.html">Achievements</a>
                 <a href="applications.html">Applications</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -39,33 +39,9 @@
             </div>
         </div>
 
-        <section class="education-section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Ph.D. at the University of Tokyo</h3>
-                <p>Graduate School of Information Science and Technology<br>
-                Department of Information and Communication Engineering<br>
-                Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
-                <em>2022.4 - 2025.3</em></p>
-            </div>
-            <div class="education-item">
-                <h3>M.S. at the University of Tokyo</h3>
-                <p>Graduate School of Information Science and Technology<br>
-                Department of Information and Communication Engineering<br>
-                Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
-                <em>2020.4 - 2022.3</em></p>
-            </div>
-            <div class="education-item">
-                <h3>B.S. at Osaka City University</h3>
-                <p>Under Graduate School of Engineering<br>
-                Department of Electrical and Information Engineering<br>
-                Supervisor: <a href="https://ds.k.kyoto-u.ac.jp/introduction/member/hayashi/">Prof. Kazunori Hayashi</a><br>
-                <em>2015.4 - 2019.3</em></p>
-            </div>
-        </section>
-
-        <section class="selected-publications">
-            <h2>Selected Publications</h2>
+        <details class="collapsible-section selected-publications" open>
+        <summary><strong>Selected Publications</strong></summary>
+        <div class="collapsible-content">
             <div class="publication-item">
                 <img src="./files/teaser/eccv24_pf.jpg" alt="PetFace" class="publication-thumbnail">
                 <div class="publication-info">
@@ -117,7 +93,38 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </details>
+
+    <details class="collapsible-section education-section" open>
+        <summary><strong>Education</strong></summary>
+        <div class="collapsible-content">
+            <div class="education-item">
+                <h3>Ph.D. at the University of Tokyo</h3>
+                <p>Graduate School of Information Science and Technology<br>
+                Department of Information and Communication Engineering<br>
+                Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
+                <em>2022.4 - 2025.3</em></p>
+            </div>
+            <div class="education-item">
+                <h3>M.S. at the University of Tokyo</h3>
+                <p>Graduate School of Information Science and Technology<br>
+                Department of Information and Communication Engineering<br>
+                Supervisor: <a href="https://www.cvm.t.u-tokyo.ac.jp/en/">Prof. Toshihiko Yamasaki</a><br>
+                <em>2020.4 - 2022.3</em></p>
+            </div>
+            <div class="education-item">
+                <h3>B.S. at Osaka City University</h3>
+                <p>Under Graduate School of Engineering<br>
+                Department of Electrical and Information Engineering<br>
+                Supervisor: <a href="https://ds.k.kyoto-u.ac.jp/introduction/member/hayashi/">Prof. Kazunori Hayashi</a><br>
+                <em>2015.4 - 2019.3</em></p>
+            </div>
+        </div>
+    </details>
+
+
+        
     </div>
 
     <script>
