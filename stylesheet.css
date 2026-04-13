@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 /* Reset */
 * {
@@ -8,26 +8,41 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding-top: 80px;
+:root {
+    --font-serif: 'Crimson Pro', Georgia, serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Source Sans 3', sans-serif;
+    --color-surface: #ffffff;
+    --color-surface-muted: #faf9f5;
+    --color-text: #171717;
+    --color-text-body: #404040;
+    --color-text-muted: #666666;
+    --color-border: #d9d9d9;
+    --color-link: #666666;
+    --color-link-hover: #171717;
 }
 
-/* Force a white page canvas across mobile/browser rendering paths */
-html,
+html {
+    font-size: 18px;
+    background-color: var(--color-surface);
+}
+
 body {
-    background-color: #fff;
+    font-family: var(--font-serif);
+    line-height: 1.65;
+    color: var(--color-text-body);
+    padding-top: 80px;
+    background-color: var(--color-surface);
 }
 
 a {
     text-decoration: none;
-    color: #1772d0;
+    color: var(--color-link);
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #f09228;
+    color: var(--color-link-hover);
 }
 
 /* Header */
@@ -36,8 +51,8 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: var(--color-surface);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     z-index: 1000;
     padding: 0 2rem;
 }
@@ -52,9 +67,10 @@ a:hover {
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
     font-weight: 700;
-    color: #333;
+    color: var(--color-text);
 }
 
 .main-nav {
@@ -63,15 +79,16 @@ a:hover {
 }
 
 .main-nav a {
-    color: #333;
+    font-family: var(--font-sans);
+    color: var(--color-text-muted);
     font-weight: 500;
     padding: 0.5rem 0;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .main-nav a:hover, 
 .main-nav a.active {
-    color: #1772d0;
+    color: var(--color-text);
 }
 
 /* Container */
@@ -100,21 +117,42 @@ a:hover {
 }
 
 .profile-info h1 {
-    font-size: 2rem;
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 2.3rem;
     margin-bottom: 1rem;
 }
 
 .social-links {
     margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.social-links a {
-    margin-right: 1rem;
-    font-size: 1.1rem;
+.profile-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 0.35rem 0.72rem;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.social-links a:hover {
-    color: #f09228;
+.profile-link-btn i {
+    font-size: 0.8rem;
+}
+
+.profile-link-btn:hover {
+    color: var(--color-text);
+    border-color: #b8b8b8;
+    background-color: var(--color-surface-muted);
 }
 
 /* Section Styling */
@@ -123,10 +161,11 @@ section {
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #333;
-    border-bottom: 2px solid #1772d0;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 0.5rem;
 }
 
@@ -136,8 +175,9 @@ section h2 {
 }
 
 .education-item h3 {
-    font-size: 1.3rem;
-    color: #333;
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    color: var(--color-text);
     margin-bottom: 0.2rem;
 }
 
@@ -154,7 +194,9 @@ section h2 {
 }
 
 .publication-item h3 {
-    font-size: 1.3rem;
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.55rem;
     margin-bottom: 0;
 }
 
@@ -169,17 +211,17 @@ section h2 {
 .publication-links a {
     display: inline-block;
     margin-bottom: 0.5rem;
-    color: #1772d0;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 .publication-links a:hover {
     text-decoration: underline;
-    color: #f09228;
+    color: var(--color-link-hover);
 }
 
 /* Publications Section Specific */
-.publications-section .publication-links a {
+.publications-section .publication-links a:not(.publication-link-btn) {
     display: inline;
     padding: 0;
     margin-right: 0;
@@ -225,10 +267,18 @@ section h2 {
     align-items: flex-start;
 }
 
+.selected-publications .publication-item h3 {
+    font-size: 1.4rem;
+}
+
 .publication-thumbnail {
-    width: 150px;
+    width: 200px;
     height: auto;
-    border: 1px solid #eee;
+    display: block;
+    border: 1.5px solid #111;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--color-surface);
 }
 
 .publication-info {
@@ -257,6 +307,12 @@ section h2 {
 
 .media-item img:hover {
     opacity: 0.8;
+}
+
+/* Keep media titles consistent even when entries have no image */
+.media-section .media-item h3,
+.media-section .publication-item h3 {
+    font-size: 1.2rem;
 }
 
 /* Responsive Design */
@@ -310,10 +366,11 @@ section h2 {
 .collapsible-section > summary {
     list-style: none;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #333;
-    border-bottom: 2px solid #1772d0;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 0.5rem;
 }
 
@@ -324,11 +381,14 @@ section h2 {
 .collapsible-section > summary::after {
     content: "+";
     float: right;
-    font-weight: 700;
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
 }
 
 .collapsible-section[open] > summary::after {
-    content: "-";
+    content: "−";
 }
 
 .collapsible-content {
@@ -339,9 +399,9 @@ section h2 {
 .news-window {
     max-height: 220px;
     overflow-y: auto;
-    border: 1px solid #eee;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    background: #fafafa;
+    background: var(--color-surface-muted);
     padding: 0.75rem 1rem;
 }
 
@@ -365,12 +425,47 @@ section h2 {
 .news-date {
     min-width: 5.5rem;
     font-weight: 700;
-    color: #1772d0;
+    color: var(--color-text);
     white-space: nowrap;
 }
 
 .news-text {
     flex: 1;
+}
+
+.publication-links {
+    margin-top: 0.55rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.publication-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1;
+    padding: 0.28rem 0.6rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.publication-link-btn i {
+    font-size: 0.72rem;
+}
+
+.publication-link-btn:hover {
+    color: var(--color-text);
+    border-color: #b8b8b8;
+    background-color: var(--color-surface-muted);
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
