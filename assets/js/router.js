@@ -68,7 +68,7 @@ window.routes = [
                             <h1>{{ $t('name') }}</h1>
                             <p v-html="$t('bio')"></p>
                             <p class="links">
-                                <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> /
+                                <!-- <a href="https://drive.google.com/file/d/1Z8tqdgiz0pSpv2i-Eka_kcoh0ymqzUoo/view?usp=sharing">CV</a> / -->
                                 <a href="mailto:shiohara@cvm.t.u-tokyo.ac.jp" title="Email"><i class="fas fa-envelope"></i></a> /
                                 <a href="https://scholar.google.co.jp/citations?user=NME5NOoAAAAJ&hl=ja&authuser=2&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> /
                                 <a href="https://twitter.com/kaedeshioharacs" title="Twitter"><i class="fab fa-twitter"></i></a> /
